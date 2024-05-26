@@ -55,7 +55,7 @@ if (estado.equals("logo")) {
     image(fondo2, 0, 0, width, height);
     fill(255);
     textAlign(CENTER, CENTER);
-    text("Three Seasons", posicion1, 230);
+    text("Four Seasons", posicion1, 230);
     if (posicion1 < width/2) { 
       posicion1 += velocidad2;
     } else {
