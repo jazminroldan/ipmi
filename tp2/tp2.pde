@@ -33,12 +33,15 @@ void setup() {
 
 void draw() {
   background(0);
-  if (estado.equals("logo")) {
+
+if (estado.equals("logo")) {
     fill(255);
     imageMode(CENTER);
     image(logo, width/2, height/2, tam, tam);
     tam = tam + 1;
-  } else if (estado.equals("segunda")) {
+
+
+} else if (estado.equals("segunda")) {
     imageMode(CORNER); 
     image(fondo1, 0, 0, width, height);
     fill(255, transp); 
@@ -46,7 +49,9 @@ void draw() {
     if (transp < 255) { 
       transp += velocidad1;
     }
-  } else if (estado.equals("tercera")) {
+
+
+} else if (estado.equals("tercera")) {
     image(fondo2, 0, 0, width, height);
     fill(255);
     textAlign(CENTER, CENTER);
@@ -56,7 +61,9 @@ void draw() {
     } else {
       posicion1 = width/2;
     }
-  } else if (estado.equals("cuarta")) {
+
+
+} else if (estado.equals("cuarta")) {
     image(fondo3, 0, 0, 640, 480);
     fill(255);
     textAlign(CENTER, CENTER);
@@ -64,7 +71,9 @@ void draw() {
     if (py > 100) {
       py--;
     }
-  } else if (estado.equals("quinta")) {
+
+
+} else if (estado.equals("quinta")) {
     image(fondo4, 0, 0, width, height);
     fill(255);
     textAlign(CENTER, CENTER);
@@ -74,7 +83,9 @@ void draw() {
     } else {
       posicion2 = width/2;
     }
-  } else if (estado.equals("sexta")) {
+
+
+} else if (estado.equals("sexta")) {
     background(0); // Fondo negro
   background(0); // Fondo negro
     
@@ -97,8 +108,7 @@ void draw() {
   if (frameCount%60 == 0) {
     segundos++;
   }
-  
-  if (segundos<7) {
+    if (segundos<7) {
     estado = "logo";
   } else if (segundos>=7 && segundos<= 12) {
     estado = "segunda";
@@ -117,7 +127,6 @@ void mouseClicked() {
     restartBoton= true; 
   }
 }
-
 void restartSketch() {
   segundos = 0; 
   estado = "logo"; 
